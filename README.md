@@ -1,73 +1,111 @@
-# Welcome to your Lovable project
+💹 Stablecoin Depeg Risk Tracker
 
-## Project info
+A full-stack application that predicts and visualizes depeg risks in stablecoins like USDT, USDC, DAI, FRAX, and more. The system consists of a high-performance C++ backend and a modern React + TypeScript frontend.
 
-**URL**: https://lovable.dev/projects/521fe524-9489-4fa0-9870-a26f7e9998d4
+---
 
-## How can I edit this code?
+## 🧠 System Architecture
 
-There are several ways of editing your application.
+[React + TypeScript + Tailwind (Frontend)]
+│
+▼
+[Node/Vite Dev Server]
+│
+▼
+[REST API / WebSocket Interface]
+│
+▼
+[C++ Backend]
+├── Multi-threaded risk tracker
+├── Real-time depeg risk analysis
+└── Scoring engine (price, sentiment, liquidity, volatility)
 
-**Use Lovable**
+yaml
+Copy
+Edit
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/521fe524-9489-4fa0-9870-a26f7e9998d4) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Features
 
-**Use your preferred IDE**
+- Real-time depeg risk detection
+- Risk scoring using financial and on-chain indicators
+- Modular C++ backend with multi-threaded analysis
+- Interactive frontend built with React + Tailwind
+- Configurable thresholds and alert system
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠 Technologies Used
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
+### Frontend
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- Vite
+- shadcn/ui
 
-## How can I deploy this project?
+### Backend
+- C++17 / C++20
+- `std::thread` for concurrency
+- nlohmann/json for data parsing
+- Mock data generation (easily replaceable with APIs)
 
-Simply open [Lovable](https://lovable.dev/projects/521fe524-9489-4fa0-9870-a26f7e9998d4) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🧪 Local Setup Instructions
 
-Yes, you can!
+### 🔧 Prerequisites
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Node.js & npm (recommended: install with [nvm](https://github.com/nvm-sh/nvm))
+- Modern C++ compiler (e.g., g++ 9+)
+- Git
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+### 📦 Clone the Repository
+
+```bash
+git clone <YOUR_GIT_REPO_URL>
+cd <YOUR_PROJECT_NAME>
+🖥 Frontend Setup
+bash
+Copy
+Edit
+cd frontend
+npm install
+npm run dev
+⚙️ Backend Setup
+bash
+Copy
+Edit
+cd backend
+g++ -std=c++17 -pthread stablecoin_tracker.cpp -o tracker
+./tracker
+📊 Sample Output
+yaml
+Copy
+Edit
+[USDT] Price: 1.02, Risk: 3.5 (Medium)
+[DAI]  Price: 0.97, Risk: 6.8 (High)
+📁 Project Structure
+pgsql
+Copy
+Edit
+📦 stablecoin-tracker/
+├── backend/
+│   ├── stablecoin_tracker.cpp
+│   └── include/
+├── frontend/
+│   ├── src/
+│   ├── public/
+├── README.md
+├── package.json
+└── CMakeLists.txt
+📢 License
+This project is licensed under the MIT License.
+
+👨‍💻 Developed by
+Aditya Chaudhari
+Backend Developer (C++ Risk Prediction Engine)
+Frontend: Modern UI built with React & Tailwind
